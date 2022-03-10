@@ -1,9 +1,322 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+
+
+body {
+    cursor: url(iconmonstr-cursor-5.svg), auto;
+    object-fit: fill;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    object-fit: fill;
+    filter: brightness(40%);
+}
+
+.heading {
+    text-align: center;
+    color: lawngreen;
+    font-family: 'VT323', monospace;
+    font-size: 10em;
+    margin: 0;
+    filter: drop-shadow(16px 16px 20px);
+}
+
+.heading-2 {
+    text-align: center;
+    color: lawngreen;
+    font-family: 'VT323', monospace;
+    font-size: 5em;
+    margin: 0;
+    filter: drop-shadow(16px 16px 20px);
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+#search {
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    font-family: 'VT323', monospace;
+    margin: 20px;
+    height: 50px;
+    width: 1000px;
+    font-size: 3em;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
+}
+
+#search:hover {
+    background-color: green;
+    color: white;
+}
+
+#submit {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    margin: 20px;
+    width: 100px;
+    font-size: 2em;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
+}
+
+#submit:hover {
+    background-color: green;
+    color: white;
+    box-shadow: 0 9px darkgreen;
+}
+
+#submit:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#roast-selection {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    margin: 20px;
+    width: 100px;
+    font-size: 2em;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
+}
+
+#roast-selection:hover {
+    background-color: green;
+    color: white;
+}
+
+.lower-body {
+    display: flex;
+    flex-direction: row;
+    margin: 0 50px;
+    justify-content: space-evenly;
+}
+
+.content {
+    color: lawngreen;
+    font-family: 'VT323', monospace;
+    font-size: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    margin: 0;
+}
+
+.coffee {
+    width: 400px;
+}
+
+.coffee h1 {
+    margin: 0;
+}
+
+#coffees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container {
+    outline: 3px solid lawngreen;
+    padding: 10px;
+
+}
+
+h2 {
+    color: lawngreen;
+    font-family: 'VT323', monospace;
+    font-size: 3em;
+    margin: 0;
+    text-align: center;
+}
+
+#add-new-roast {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    height: 40px;
+    margin: 10px;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
+    font-size: 2em;
+}
+
+#add-new-roast:hover {
+    background-color: green;
+    color: white;
+}
+
+.label {
+    color: lawngreen;
+    font-family: 'VT323', monospace;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.storage {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    width: 300px;
+    font-size: 2em;
+    margin: 10px;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
+}
+
+.storage:hover {
+    background-color: green;
+    color: white;
+}
+
+.new-search {
+    display: flex;
+}
+
+#submit-coffee {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    margin: 20px;
+    width: 100px;
+    font-size: 2em;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
+}
+
+#submit-coffee:hover {
+    background-color: green;
+    color: white;
+    box-shadow: 0 9px darkgreen;
+}
+
+#submit-coffee:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.button {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    margin: 20px;
+    width: 100px;
+    font-size: 2em;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
+}
+
+.button:hover {
+    background-color: green;
+    color: white;
+    box-shadow: 0 9px darkgreen;
+}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#remove {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    margin: 20px;
+    width: 100px;
+    font-size: 2em;
+    width: 300px;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
+}
+
+#remove:hover {
+    background-color: green;
+    color: white;
+    box-shadow: 0 9px darkgreen;
+}
+
+#remove:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.details{
+    color: lawngreen;
+    width: 100%;
+    font-size: 2em;
+}
+
+.summary {
+    font-family: 'VT323', monospace;
+}
+
+.roast-text {
+    font-family: 'VT323', monospace;
+}
+
+.text {
+    font-family: 'VT323', monospace;
+    font-size: 2em;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (max-width: 768px) {
+    .search{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .lower-body{
+        margin-top: -2em;
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .content{
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 2em;
+        margin-right: 1em;
+    }
+    #coffees{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .coffee{
+        font-size: 15px;
+        width: 30%;
+        outline: 3px solid lawngreen;
+        margin-right: 2%;
+        margin-bottom: 3em;
+        text-align: center;
+    }
+    .summary{
+        text-align: center;
+        margin: 1em 0;
+    }
+    .text, .roast-text{
+        text-align: center;
+    }
+    #submit-coffee{
+        margin-left: 3em;
+    }
+    .button{
+        margin-left: 2em;
+    }
+    #remove{
+        margin-left: 3em;
+    }
 }

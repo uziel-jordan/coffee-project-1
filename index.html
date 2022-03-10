@@ -2,33 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Fortran Fuel</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel = "icon" type = "image/png" href = "letter-f-svgrepo-com.svg">
+    <script language="javascript" type="text/javascript">
+        function playSound(soundfile) {
+            document.getElementById("sounds").innerHTML=
+                "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+        }
+    </script>
 </head>
-<body>
-    <h1>Coffee!</h1>
 
-    <form>
+<body>
+
+    <video playsinline autoplay muted loop id="myVideo">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+
+    <span id="sounds"></span>
+
+    <h1 class="heading">< FORTRAN FUEL /></h1>
+    <h2 class="heading-2">...Fuel For Coders</h2>
+
+    <form class="search">
         <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <select id="roast-selection" onmouseover="playSound('sounds/hover-sound.mp3')">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
+        <input type="text" id="search" placeholder="Search..." onmouseover="playSound('sounds/hover-sound.mp3')">
+        <input id="submit" type="submit" onmouseover="playSound('sounds/hover-sound.mp3')" onclick="playSound('sounds/submit-sound.mp3')">
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <br>
+    <br>
 
+    <div class="lower-body">
+        <div class="content">
+
+            <div id="coffees"></div>
+        </div>
+
+        <form class="container">
+
+            <h2>--ADD NEW COFFEE--</h2>
+            <br>
+
+            <div class="new-search">
+                <label class="label" for="add-new-roast" style="color: lawngreen">Roast: </label>
+                <select id="add-new-roast" onmouseover="playSound('sounds/hover-sound.mp3')">
+
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <input class="storage" type="text" id="new-coffee-name" placeholder="Coffee Name Here" onmouseover="playSound('sounds/hover-sound.mp3')">
+
+            </div>
+
+            <input id="submit-coffee" type="submit" onmouseover="playSound('sounds/hover-sound.mp3')" onclick="playSound('sounds/submit-sound.mp3')">
+            <button class="button" onmouseover="playSound('sounds/hover-sound.mp3')" onclick="playSound('sounds/submit-sound.mp3')">Save</button>
+
+            <details class="details">
+                <summary class="summary">Saved Coffee %</summary>
+
+                <p class="text"></p>
+                <p class="roast-text"></p>
+
+            </details>
+
+            <button id="remove" onmouseover="playSound('sounds/hover-sound.mp3')" onclick="playSound('sounds/submit-sound.mp3')">Remove Saved Coffee</button>
+            <br>
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/09d59239c9.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
