@@ -8,23 +8,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel = "icon" type = "image/png" href = "letter-f-svgrepo-com.svg">
+    <script language="javascript" type="text/javascript">
+        function playSound(soundfile) {
+            document.getElementById("sounds").innerHTML=
+                "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+        }
+    </script>
 </head>
 
 <body>
 
-    <h1 class="heading">FORTRAN FUEL</h1>
+
+
+    <video playsinline autoplay muted loop id="myVideo">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+
+    <span id="sounds"></span>
+
+    <h1 class="heading">< FORTRAN FUEL /></h1>
     <h2 class="heading-2">...Fuel For Coders</h2>
-    <i class="fa-solid fa-gamepad-modern"></i>
 
     <form class="search">
         <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <select id="roast-selection" onmouseover="playSound('sounds/hover-sound.mp3')">
             <option>Light</option>
             <option>Medium</option>
             <option>Dark</option>
         </select>
-        <input type="text" id="search" placeholder="Search...">
-        <input id="submit" type="submit" />
+        <input type="text" id="search" placeholder="Search..." onmouseover="playSound('sounds/hover-sound.mp3')">
+        <input id="submit" type="submit" onmouseover="playSound('sounds/hover-sound.mp3')" onclick="playSound('sounds/submit-sound.mp3')">
     </form>
 
     <br>
@@ -38,33 +51,33 @@
 
         <form class="container">
 
-            <h2>ADD NEW COFFEE</h2>
+            <h2>--ADD NEW COFFEE--</h2>
             <br>
 
             <div class="new-search">
                 <label class="label" for="add-new-roast" style="color: lawngreen">Roast: </label>
-                <select id="add-new-roast">
+                <select id="add-new-roast" onmouseover="playSound('sounds/hover-sound.mp3')">
 
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-                <input class="storage" type="text" id="new-coffee-name" placeholder="Coffee Name Here">
+                <input class="storage" type="text" id="new-coffee-name" placeholder="Coffee Name Here" onmouseover="playSound('sounds/hover-sound.mp3')">
 
             </div>
 
-            <input id="submit-coffee" type="submit"/>
-            <button class="button">Save</button>
+            <input id="submit-coffee" type="submit" onmouseover="playSound('sounds/hover-sound.mp3')" onclick="playSound('sounds/submit-sound.mp3')">
+            <button class="button" onmouseover="playSound('sounds/hover-sound.mp3')" onclick="playSound('sounds/submit-sound.mp3')">Save</button>
 
             <details class="details">
-                <summary class="summary">Saved Coffee</summary>
+                <summary class="summary">Saved Coffee %</summary>
 
                 <p class="text"></p>
                 <p class="roast-text"></p>
 
             </details>
 
-            <button id="remove">Remove Saved Coffee</button>
+            <button id="remove" onmouseover="playSound('sounds/hover-sound.mp3')" onclick="playSound('sounds/submit-sound.mp3')">Remove Saved Coffee</button>
             <br>
         </form>
     </div>
