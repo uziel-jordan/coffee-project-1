@@ -56,7 +56,6 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-
 let userInput = document.getElementById("search")
 userInput.addEventListener('keyup', filterCoffees)
 
@@ -65,7 +64,6 @@ function filterCoffees(e) {
     var result = userInput.value;
     // var result = userInput.textContent = e.target.value;
     console.log(result);
-
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.name.toLowerCase().includes(result.toLowerCase())){
@@ -155,8 +153,8 @@ buttonRemover.addEventListener('click', remove => {
     localStorage.removeItem('coffeeroast');
 })
 
-var audio = document.getElementById("hover-sound");
-audio.play();
+//var audio = document.getElementById("hover-sound");
+//audio.play();
 
-var audioTwo = document.getElementById("submit-sound");
-audio.play();
+//var audioTwo = document.getElementById("submit-sound");
+//audio.play();

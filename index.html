@@ -18,8 +18,6 @@
 
 <body>
 
-
-
     <video playsinline autoplay muted loop id="myVideo">
         <source src="background.mp4" type="video/mp4">
     </video>
@@ -32,9 +30,9 @@
     <form class="search">
         <label for="roast-selection"></label>
         <select id="roast-selection" onmouseover="playSound('sounds/hover-sound.mp3')">
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
         </select>
         <input type="text" id="search" placeholder="Search..." onmouseover="playSound('sounds/hover-sound.mp3')">
         <input id="submit" type="submit" onmouseover="playSound('sounds/hover-sound.mp3')" onclick="playSound('sounds/submit-sound.mp3')">
@@ -81,8 +79,6 @@
             <br>
         </form>
     </div>
-
-
 
     <script src="https://kit.fontawesome.com/09d59239c9.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
